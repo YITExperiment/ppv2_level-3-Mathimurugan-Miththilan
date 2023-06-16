@@ -1,14 +1,18 @@
-import turtle
+import turtle as t
 
 from itertools import cycle
-colors = cycle(['red','orang','yellow','green','blue','purple'])
+colors = cycle(['red','orange','yellow','green','blue','purple'])
 
-def draw_circle(size):
-    turtle.pencolor(next(colors))
-    turtle.circle(size)
-    draw_circle(size+5)
+def draw_circle(size,angle,shift):
+    t.bgcolor(next(colors))
+    t.pencolor(next(colors))
+    t.circle(size)
+    t.right(angle)
+    t.forward(shift)
+    draw_circle(size+5,angle+1,shift+1)
 
-turtle.bgcolor('black')
-turtle.speed('fast')
-turtle.pensize(4)
+t.bgcolor('black')
+t.speed('fast')
+t.pensize(4)
 draw_circle(30,0,1)
+
