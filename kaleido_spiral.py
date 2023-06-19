@@ -8,7 +8,7 @@ def draw_circle(size,angle,shift):
     t.circle(size)
     t.right(angle)
     t.forward(shift)
-    draw_circle(size+10,angle+10,shift+1)
+    draw_circle(size+5,angle-20,shift-10)
 
 t.bgcolor('black')
 t.speed('fast')
